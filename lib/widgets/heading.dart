@@ -17,6 +17,7 @@ class Heading extends StatelessWidget {
   final List<dynamic>? content;
   final FontWeight fontWeight;
   final Next next;
+  final Options? options;
 
   Heading({
     this.text = '',
@@ -24,6 +25,7 @@ class Heading extends StatelessWidget {
     this.content,
     this.fontWeight = FontWeight.bold,
     required this.next,
+    this.options,
   });
 
   @override
@@ -41,7 +43,8 @@ class Heading extends StatelessWidget {
           ),
         ],
       ),
-      textAlign: TextAlign.start,
+      style: options?.defaultStyle,
+      textAlign: options?.textAlign ?? TextAlign.start,
     );
   }
 }
