@@ -56,9 +56,36 @@ class MARKS {
     for (var mark in marks) {
       textStyles.putIfAbsent(mark.type, () => renderMark[mark.type]);
     }
+    final boldTextStyle = textStyles['bold'];
+    final fontWeight = boldTextStyle?.fontWeight;
+
+    final italicTextStyle = textStyles['italic'];
+    final fontStyle = italicTextStyle?.fontStyle;
+
+    final Color? color;
+    final double? fontSize;
+    final String? fontFamily;
+
+    if (boldTextStyle != null) {
+      color = boldTextStyle.color;
+      fontSize = boldTextStyle.fontSize;
+      fontFamily = boldTextStyle.fontFamily;
+    } else if (italicTextStyle != null) {
+      color = italicTextStyle.color;
+      fontSize = italicTextStyle.fontSize;
+      fontFamily = italicTextStyle.fontFamily;
+    } else {
+      color = null;
+      fontSize = null;
+      fontFamily = null;
+    }
+
     return defaultStyle.copyWith(
-      fontWeight: textStyles['bold']?.fontWeight,
-      fontStyle: textStyles['italic']?.fontStyle,
+      fontWeight: fontWeight,
+      color: color,
+      fontStyle: fontStyle,
+      fontSize: fontSize,
+      fontFamily: fontFamily,
       decoration: textStyles['underline']?.decoration,
     );
   }
