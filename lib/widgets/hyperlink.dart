@@ -1,4 +1,3 @@
-import 'package:contentful_rich_text/state/renderers.dart';
 import 'package:contentful_rich_text/types/marks.dart';
 import 'package:contentful_rich_text/types/types.dart';
 import 'package:flutter/gestures.dart';
@@ -6,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Hyperlink extends TextSpan {
-  Hyperlink(node, next)
+  Hyperlink(node, next, singletonRenderers)
       : assert(node['data'] != null),
         assert(node['data']['uri'] != null), // ensure uri exists for hyperlink
         assert(node['data']['uri'] != ''),

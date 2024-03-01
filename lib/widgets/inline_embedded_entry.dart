@@ -4,7 +4,7 @@ import 'package:contentful_rich_text/types/types.dart';
 import 'package:flutter/material.dart';
 
 class InlineEmbeddedEntry extends TextSpan {
-  InlineEmbeddedEntry(node, next)
+  InlineEmbeddedEntry(node, next, singletonRenderers)
       : super(
           text: node['value'],
           style: MARKS

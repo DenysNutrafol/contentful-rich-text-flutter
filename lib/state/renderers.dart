@@ -5,5 +5,3 @@ class Renderers {
   late Map<dynamic, TextStyle> renderMark;
   late TextStyle defaultStyle;
 }
-
-Renderers singletonRenderers = Renderers();

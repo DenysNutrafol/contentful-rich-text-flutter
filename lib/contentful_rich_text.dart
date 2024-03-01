@@ -25,6 +25,8 @@ class ContentfulRichText {
   Options options;
   Document? richTextDocument;
 
+  Renderers singletonRenderers = Renderers();
+
   // TODO: implement
   static Widget _defaultInline(INLINES type, Inline node) => Container();
 
@@ -92,8 +94,8 @@ class ContentfulRichText {
         INLINES.ENTRY_HYPERLINK.value: (node, next) =>
             _defaultInline(INLINES.ENTRY_HYPERLINK, node as Inline),
         INLINES.EMBEDDED_ENTRY.value: (node, next) =>
-            InlineEmbeddedEntry(node, next),
-        INLINES.HYPERLINK.value: (node, next) => Hyperlink(node, next),
+            InlineEmbeddedEntry(node, next, singletonRenderers),
+        INLINES.HYPERLINK.value: (node, next) => Hyperlink(node, next, singletonRenderers),
       });
 
   /// This is the main entry point for ContentfulRichText. To render
