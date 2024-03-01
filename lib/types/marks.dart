@@ -67,14 +67,14 @@ class MARKS {
     String? fontFamily;
 
     if (boldTextStyle != null) {
-      color = boldTextStyle.color;
-      fontSize = boldTextStyle.fontSize;
-      fontFamily = boldTextStyle.fontFamily;
+      color = boldTextStyle.color ?? color;
+      fontSize = boldTextStyle.fontSize ?? fontSize;
+      fontFamily = boldTextStyle.fontFamily ?? fontFamily;
     }
     if (italicTextStyle != null) {
-      color = italicTextStyle.color;
-      fontSize = italicTextStyle.fontSize;
-      fontFamily = italicTextStyle.fontFamily;
+      color = italicTextStyle.color ?? color;
+      fontSize = italicTextStyle.fontSize ?? fontSize;
+      fontFamily = italicTextStyle.fontFamily ?? fontFamily;
     }
 
     return defaultStyle.copyWith(
