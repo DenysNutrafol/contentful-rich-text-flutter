@@ -85,6 +85,7 @@ class ContentfulRichText {
               type: node.nodeType == BLOCKS.OL_LIST.value
                   ? ListItemType.ordered
                   : ListItemType.unordered,
+              textScaler: options.textScaler,
               children: node['content'] ?? '',
             ),
         BLOCKS.QUOTE.value: (node, next) => Container(), // TODO: implement
@@ -140,6 +141,7 @@ class ContentfulRichText {
     if (Helpers.isText(node)) {
       return Text.rich(
         textAlign: options.textAlign,
+        textScaler: options.textScaler,
         TextSpan(text: _processInlineNode(node)),
       );
     } else if (Helpers.isParagraph(node) || Helpers.isHeader(node)) {

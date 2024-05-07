@@ -13,6 +13,7 @@ class Paragraph extends StatelessWidget {
     return Text.rich(
       style: options?.defaultStyle,
       textAlign: options?.textAlign,
+      textScaler: options?.textScaler,
       TextSpan(
         children: [
           TextSpan(

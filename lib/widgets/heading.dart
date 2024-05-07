@@ -45,6 +45,7 @@ class Heading extends StatelessWidget {
       ),
       style: options?.defaultStyle,
       textAlign: options?.textAlign ?? TextAlign.start,
+      textScaler: options?.textScaler,
     );
   }
 }

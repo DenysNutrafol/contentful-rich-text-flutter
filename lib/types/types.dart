@@ -86,6 +86,7 @@ class Options {
     required this.renderNode,
     this.renderMark,
     required this.defaultStyle,
+    this.textScaler,
     this.textAlign = TextAlign.center,
     this.mainAxisAlignment = MainAxisAlignment.start,
   });
@@ -101,6 +102,9 @@ class Options {
 
   /// Text Align
   TextAlign textAlign;
+
+  /// Text Scaler
+  TextScaler? textScaler;
 
   /// Main Axis Alignment
   MainAxisAlignment mainAxisAlignment;

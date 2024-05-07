@@ -11,6 +11,7 @@ class Bullet extends Text {
     bool? softWrap,
     TextOverflow? overflow,
     double? textScaleFactor,
+    TextScaler? textScaler,
     int? maxLines,
     String? semanticsLabel,
   }) : super(
@@ -23,6 +24,7 @@ class Bullet extends Text {
           softWrap: softWrap,
           overflow: overflow,
           textScaleFactor: textScaleFactor,
+          textScaler: textScaler,
           maxLines: maxLines,
           semanticsLabel: semanticsLabel,
         );

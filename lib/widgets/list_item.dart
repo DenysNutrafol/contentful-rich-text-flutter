@@ -10,6 +10,7 @@ class ListItem extends StatelessWidget {
   final String? punctuation;
   final String? index;
   final List<Widget>? children;
+  final TextScaler? textScaler;
 
   ListItem({
     required this.type,
@@ -18,6 +19,7 @@ class ListItem extends StatelessWidget {
     this.indent,
     this.punctuation,
     this.children,
+    this.textScaler,
   });
 
   ListItem.unordered({
@@ -27,6 +29,7 @@ class ListItem extends StatelessWidget {
     this.indent,
     this.punctuation,
     this.children,
+    this.textScaler,
   });
 
   ListItem.ordered({
@@ -36,6 +39,7 @@ class ListItem extends StatelessWidget {
     this.indent,
     this.punctuation = '.',
     this.children,
+    this.textScaler,
   });
 
   @override
@@ -51,6 +55,7 @@ class ListItem extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(right: 1.0, left: 8.0),
                 child: Bullet(
+                  textScaler: textScaler,
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
