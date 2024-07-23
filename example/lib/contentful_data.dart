@@ -90,6 +90,26 @@ class ContentfulData {
             "nodeType": "text"
           },
           {
+            "nodeType": "text",
+            "value": "1, 2",
+            "marks": [
+              {
+                 "type": "superscript"
+              }
+            ],
+            "data": {}
+           },
+          {
+            "nodeType": "text",
+            "value": "3, 4",
+            "marks": [
+              {
+                 "type": "subscript"
+              }
+            ],
+            "data": {}
+           },
+          {
             "data": {
               "uri": "https://google.com"
             },
